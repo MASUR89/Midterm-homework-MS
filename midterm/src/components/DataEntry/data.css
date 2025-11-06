@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 381px;
+    height: 352px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
