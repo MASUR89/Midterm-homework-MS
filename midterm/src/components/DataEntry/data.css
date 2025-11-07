@@ -12,3 +12,126 @@
     align-items: center;
     justify-content: center;
 }
+
+.data-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.cardholder, .cardnumber {
+    width: 100%;
+    height: 69px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.cardholder p, .cardnumber p, .datecvc p, .cvc-field p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 100%;
+    color: #21092F;
+}
+
+.cardholder input, .cardnumber input {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #DFDEE0;
+    border-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    color: #21092F;
+}
+
+.datecvc {
+    width: 100%;
+    height: 69px;
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date-fields {
+    width: 170px;
+    height: 69px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.date-inputs {
+    width: 170px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date-inputs div {
+    width: 80px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.date-inputs input {
+    width: 80px;
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #DFDEE0;
+    border-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    color: #21092F;
+}
+
+.cvc-field {
+    width: 191px;
+    height: 69px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cvc-field input {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #DFDEE0;
+    border-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    color: #21092F;
+}
+
+button {
+    width: 100%;
+    height: 48px;
+    background-color: #21092F;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 540;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FFFFFF;
+    cursor: pointer;
+}

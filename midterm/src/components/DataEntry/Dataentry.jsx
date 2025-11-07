@@ -108,30 +108,32 @@ export default function Dataentry() {
         </div>
 
          <div className="datecvc">
-          <p>EXP. DATE (MM/YY)</p>
           <div className="date-fields">
-            <div>
-              <input
-                type="text"
-                placeholder="MM"
-                value={month}
-                onChange={handleMonthChange}
-                inputMode="numeric"
-                aria-invalid={!!errors.month}
-              />
-              {errors.month && <div className="error">{errors.month}</div>}
-            </div>
+            <p>EXP. DATE (MM/YY)</p>
+            <div className="date-inputs">
+              <div>
+                <input
+                  type="text"
+                  placeholder="MM"
+                  value={month}
+                  onChange={handleMonthChange}
+                  inputMode="numeric"
+                  aria-invalid={!!errors.month}
+                />
+                {errors.month && <div className="error">{errors.month}</div>}
+              </div>
 
-            <div>
-              <input
-                type="text"
-                placeholder="YY"
-                value={year}
-                onChange={handleYearChange}
-                inputMode="numeric"
-                aria-invalid={!!errors.year}
-              />
-              {errors.year && <div className="error">{errors.year}</div>}
+              <div>
+                <input
+                  type="text"
+                  placeholder="YY"
+                  value={year}
+                  onChange={handleYearChange}
+                  inputMode="numeric"
+                  aria-invalid={!!errors.year}
+                />
+                {errors.year && <div className="error">{errors.year}</div>}
+              </div>
             </div>
           </div>
 
