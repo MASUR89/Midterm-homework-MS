@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './data.css';
 import Cards from '../Cards/Cards.jsx';
+import Complete from '../Complete/Complete.jsx';
 
 const cardNumberFormat = (raw) => {
   const digits = raw.replace(/\D/g, '').slice(0, 16);
@@ -17,6 +18,7 @@ export default function Dataentry() {
   const [year, setYear] = useState('');
   const [cvc, setCvc] = useState('');
   const [errors, setErrors] = useState({});
+  const [isComplete, setIsComplete] = useState(false);
 
   const nameRegex = /^\p{L}[\p{L}\s\-']{1,29}$/u;
   const monthRegex = /^(0[1-9]|1[0-2])$/;
@@ -55,13 +57,13 @@ export default function Dataentry() {
     setErrors(validation);
     if (Object.keys(validation).length === 0) {
       console.log('Form submitted:', { name, number, month, year, cvc });
-    }
+      setIsComplete(true);
+    };
   };
 
   const hasError = Object.keys(errors).length > 0;
 
   return (
-
     <div className="page-container">
 
       <div className="cards-section">
@@ -69,6 +71,10 @@ export default function Dataentry() {
       </div>  
     
       <div className="main">
+       {isComplete ? (
+          <Complete />
+        ) : (
+          <>
           <div className="cardholder">
           <div><p>CARDHOLDER NAME</p></div>
           <div>
@@ -144,8 +150,9 @@ export default function Dataentry() {
           </div>
         </div>
       <button type="button" onClick={handleSubmit}>Confirm</button>
-    </div> 
-
+     </>
+        )}
+      </div>
     </div>
   );
 }
