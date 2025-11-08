@@ -143,9 +143,9 @@ export default function Dataentry() {
             {errors.cvc && <div className="error">{errors.cvc}</div>}
           </div>
         </div>
+      <button type="button" onClick={handleSubmit}>Confirm</button>
     </div> 
 
-      <button type="button" onClick={handleSubmit}>Confirm</button>
     </div>
   );
 }

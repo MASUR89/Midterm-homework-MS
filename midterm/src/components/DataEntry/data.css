@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+.page-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 20px;
+    background: #fbf9fc;
+
+}
+
 .main {
   width: 381px;
   min-height: 352px; 
