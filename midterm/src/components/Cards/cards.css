@@ -2,8 +2,6 @@
     width: 541px   ;
     height: 527px ;
     display: block;
-    box-shadow: 0px 39px 60px 0px #00000024;
-    border-radius: 8px;
 }
 .card-front {
     width: 100%;
@@ -18,10 +16,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
 }
 .img {
     width: 100%;
     height: 50%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.img img {
+    width: 84px;
+    height: 47px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 .card-number-display {
     width: 100%;
@@ -39,7 +48,7 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
-    padding-left: 50px;
+    padding-left: 30px;
 }
 
 .cardholder-name-display {
@@ -75,7 +84,8 @@
     height: 250px;
     background: linear-gradient(168.73deg, #FFFFFF 5%, #D2D3D9 91.69%);
     border-radius: 8px;
-    display: block
+    display: block;
+    box-shadow: 0px 40px 30px rgba(0, 0, 0, 0.09);
 }
 .black {
     width: 100%;
@@ -99,4 +109,9 @@
     line-height: 100%;
     color: #fdfcfc;
     letter-spacing: 2px;
+}
+
+.sometext {
+    height: 26px;
+    margin-top: 40px;
 }
