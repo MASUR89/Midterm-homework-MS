@@ -123,111 +123,114 @@ function Dataentry() {
   };
 
   return (
-    <div className="page-container">
-      <div className="cards-section">
-        <Cards
-          name={preview.name}
-          number={preview.number}
-          month={preview.month}
-          year={preview.year}
-          cvc={preview.cvc}
-        />
-      </div>
-
-      <div className="main">
-        {isComplete ? (
-          <Complete
-            onContinue={() => {
-              if (nameRef.current) nameRef.current.value = '';
-              if (numberRef.current) numberRef.current.value = '';
-              if (monthRef.current) monthRef.current.value = '';
-              if (yearRef.current) yearRef.current.value = '';
-              if (cvcRef.current) cvcRef.current.value = '';
-              localStorage.removeItem('cardData');
-              setPreview({ name: '', number: '', month: '', year: '', cvc: '' });
-              setErrors({});
-              setIsComplete(false);
-            }}
+    <div className="container">
+      <div className="violet"></div>
+      <div className="page-container">
+        <div className="cards-section">
+          <Cards
+            name={preview.name}
+            number={preview.number}
+            month={preview.month}
+            year={preview.year}
+            cvc={preview.cvc}
           />
-        ) : (
-          <>
-            <div className="cardholder">
-              <div className='title'>CARDHOLDER NAME</div>
-              <div>
-                <input
-                  className={`name ${errors.name ? 'input-error' : ''}`}
-                  type="text"
-                  placeholder="e.g. Nino Ninidze"
-                  ref={nameRef}
-                  onChange={handleChange}
-                />
-              </div>
-              {errors.name && <div className="error">{errors.name}</div>}
-            </div>
+        </div>
 
-            <div className="cardnumber">
-              <div className='title'>CARD NUMBER</div>
-              <div>
-                <input
-                  className={`number ${errors.number ? 'input-error' : ''}`}
-                  type="text"
-                  placeholder="e.g. 1234 5678 9123 0000"
-                  ref={numberRef}
-                  onChange={handleChange}
-                  inputMode="numeric"
-                />
-              </div>
-              {errors.number && <div className="error">{errors.number}</div>}
-            </div>
-
-            <div className="datecvc">
-              <div className="date-fields">
-                <div className='title'>EXP. DATE (MM/YY)</div>
-                <div className="date-inputs">
-                  <div>
-                    <input
-                      className={`${errors.month ? 'input-error' : ''}`}
-                      type="text"
-                      placeholder="MM"
-                      ref={monthRef}
-                      onChange={handleChange}
-                      inputMode="numeric"
-                    />
-                    {errors.month && <div className="error">{errors.month}</div>}
-                  </div>
-                  <div>
-                    <input
-                      className={`${errors.year ? 'input-error' : ''}`}
-                      type="text"
-                      placeholder="YY"
-                      ref={yearRef}
-                      onChange={handleChange}
-                      inputMode="numeric"
-                    />
-                    {errors.year && <div className="error">{errors.year}</div>}
-                  </div>
-                </div>
-              </div>
-
-              <div className="cvc-field">
-                <div className='title'>CVC</div>
+        <div className="main">
+          {isComplete ? (
+            <Complete
+              onContinue={() => {
+                if (nameRef.current) nameRef.current.value = '';
+                if (numberRef.current) numberRef.current.value = '';
+                if (monthRef.current) monthRef.current.value = '';
+                if (yearRef.current) yearRef.current.value = '';
+                if (cvcRef.current) cvcRef.current.value = '';
+                localStorage.removeItem('cardData');
+                setPreview({ name: '', number: '', month: '', year: '', cvc: '' });
+                setErrors({});
+                setIsComplete(false);
+              }}
+            />
+          ) : (
+            <>
+              <div className="cardholder">
+                <div className='title'>CARDHOLDER NAME</div>
                 <div>
                   <input
-                    className={`${errors.cvc ? 'input-error' : ''}`}
+                    className={`name ${errors.name ? 'input-error' : ''}`}
                     type="text"
-                    placeholder="e.g. 123"
-                    ref={cvcRef}
+                    placeholder="e.g. Nino Ninidze"
+                    ref={nameRef}
+                    onChange={handleChange}
+                  />
+                </div>
+                {errors.name && <div className="error">{errors.name}</div>}
+              </div>
+
+              <div className="cardnumber">
+                <div className='title'>CARD NUMBER</div>
+                <div>
+                  <input
+                    className={`number ${errors.number ? 'input-error' : ''}`}
+                    type="text"
+                    placeholder="e.g. 1234 5678 9123 0000"
+                    ref={numberRef}
                     onChange={handleChange}
                     inputMode="numeric"
                   />
                 </div>
-                {errors.cvc && <div className="error">{errors.cvc}</div>}
+                {errors.number && <div className="error">{errors.number}</div>}
               </div>
-            </div>
 
-            <button type="button" onClick={handleSubmit}>Confirm</button>
-          </>
-        )}
+              <div className="datecvc">
+                <div className="date-fields">
+                  <div className='title'>EXP. DATE (MM/YY)</div>
+                  <div className="date-inputs">
+                    <div>
+                      <input
+                        className={`${errors.month ? 'input-error' : ''}`}
+                        type="text"
+                        placeholder="MM"
+                        ref={monthRef}
+                        onChange={handleChange}
+                        inputMode="numeric"
+                      />
+                      {errors.month && <div className="error">{errors.month}</div>}
+                    </div>
+                    <div>
+                      <input
+                        className={`${errors.year ? 'input-error' : ''}`}
+                        type="text"
+                        placeholder="YY"
+                        ref={yearRef}
+                        onChange={handleChange}
+                        inputMode="numeric"
+                      />
+                      {errors.year && <div className="error">{errors.year}</div>}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="cvc-field">
+                  <div className='title'>CVC</div>
+                  <div>
+                    <input
+                      className={`${errors.cvc ? 'input-error' : ''}`}
+                      type="text"
+                      placeholder="e.g. 123"
+                      ref={cvcRef}
+                      onChange={handleChange}
+                      inputMode="numeric"
+                    />
+                  </div>
+                  {errors.cvc && <div className="error">{errors.cvc}</div>}
+                </div>
+              </div>
+
+              <button type="button" onClick={handleSubmit}>Confirm</button>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
