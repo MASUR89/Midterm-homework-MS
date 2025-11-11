@@ -8,3 +8,6 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
+
+
+//https://www.figma.com/design/EJammfajR2L5iHhnrIl26y/interactive-card-details-form?node-id=0-223&p=f&t=hotflI3slKdT91Va-0
