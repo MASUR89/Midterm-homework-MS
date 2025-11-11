@@ -1,5 +1,5 @@
 import './App.css'
-import Dataentry from './components/DataEntry/Dataentry.jsx'
+import Dataentry from './components/DataEntry/Dataentry.tsx'
 
 
 function App() {
