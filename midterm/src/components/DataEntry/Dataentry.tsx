@@ -159,7 +159,7 @@ function Dataentry() {
                   <input
                     className={`name ${errors.name ? 'input-error' : ''}`}
                     type="text"
-                    placeholder="e.g. Nino Ninidze"
+                    placeholder="e.g. Jane Appleseed"
                     ref={nameRef}
                     onChange={handleChange}
                   />

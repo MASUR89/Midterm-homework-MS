@@ -1,6 +1,6 @@
 import React from 'react';
 import './complete.css';
-import doneIcon from '../../assets/images/group9.png';
+// import doneIcon from '../../assets/images/group9.png';
 
 interface CompleteProps {
   onContinue: () => void;
@@ -10,7 +10,7 @@ function Complete({ onContinue }: CompleteProps) {
   return (
     <div className='final'>
       <div className='done-img'>
-        <img src={doneIcon} alt="Done" />
+        {/* <img src={doneIcon} alt="Done" /> */}
       </div>
       <div className="madloba">
         <div className='thankyou'>
