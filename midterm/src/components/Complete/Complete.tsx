@@ -1,6 +1,5 @@
-import React from 'react';
 import './complete.css';
-import doneIcon from '../../assets/images/group9.png';
+import doneIcon from '../../assets/images/Group9.png';
 
 interface CompleteProps {
   onContinue: () => void;
