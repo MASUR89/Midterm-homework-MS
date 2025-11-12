@@ -3,14 +3,14 @@
     height: 527px ;
     display: block;
 }
-.card-front {
+.card-front, .card-back {
     width: 100%;
     height: 50%;
 }
 
 .front-iner {
-    width: 447px;
-    height: 250px;
+    width: 82%;
+    height: 94%;
     border-radius: 8px;
     background: linear-gradient(163.95deg, #6348FE 4.74%, #610595 88.83%);
     display: flex;
@@ -71,17 +71,14 @@
     letter-spacing: 2px;
 }
 
-
 .card-back {
-    width: 100%;
-    height: 50%;
     display: flex;
     align-items: end;
     justify-content: end;
 }
 .back-iner {
-    width: 447px;
-    height: 250px;
+    width: 82%;
+    height: 94%;
     background: linear-gradient(168.73deg, #FFFFFF 5%, #D2D3D9 91.69%);
     border-radius: 8px;
     display: block;
@@ -114,4 +111,96 @@
 .sometext {
     height: 26px;
     margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    .violet {
+        width: 100%;
+        height: 33%;
+    }
+    .page-container {
+        padding: 0;
+        gap: 0;
+    }
+    .cards-container {
+        width: 343px;
+        height: 251px;
+        top: -50px;
+        position: relative;
+    }
+    .card-front, .card-back {
+        width: 286px;
+        height: 157px;
+        position: absolute;
+    }
+    .card-back {
+        top: 0;
+        right: 0;
+        z-index: 2;
+    }
+    .card-front {
+        top: 95px;
+        left: 0;
+        z-index: 3;
+    }
+    .card-front .img {
+        height: 70px;
+    }
+    .card-front img {
+        width: 54px;
+        height: 30px;
+        margin-left: 24px;
+        margin-top: 20px;
+    }
+    .card-number-display {
+        font-size: 18px;
+        letter-spacing: 2px;
+        padding: 0 20px;
+    }
+    .name-line {
+        padding-left: 24px;
+    }
+    .cardholder-name-display {
+        font-size: 10px;
+    }
+    .exp-date-display {
+        padding-right: 17px;
+        font-size: 11px;
+    }
+
+    .front-iner, .back-iner {
+        width: 100%;
+        height: 100%;
+    }
+    .black {
+        height: 34px;
+        margin-top: 16px;
+    }
+    .cvc-display {
+        height: 29px;
+        margin-top: 16px;
+    }
+    .sometext {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .violet {
+        height: 30%;
+    }
+    .cards-container {
+        top: -50px;
+    }
+    .main {
+        width: 330px;
+        min-height: 328px;
+        margin-bottom: 50px;
+    }
+    .datecvc {
+        gap: 10px;
+    }
+    .date-inputs {
+        gap: 8px;
+    }
 }

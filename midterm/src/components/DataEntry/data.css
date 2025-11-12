@@ -63,6 +63,7 @@
     font-weight: 500;
     font-size: 11px;
     line-height: 100%;
+    letter-spacing: 2px;
     color: #21092F;
 }
 
@@ -184,4 +185,9 @@ button {
         flex-direction: column;
         gap: 60px;
     }
+}
+
+@media (max-width: 600px) {
+    
+  
 }

@@ -55,3 +55,8 @@
     text-align: center;
     cursor: pointer;
 }
+@media (max-width: 450px) {
+    .final {
+        width: 100%;
+    }
+}
